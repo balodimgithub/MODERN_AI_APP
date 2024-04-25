@@ -326,3 +326,4 @@ export const socials = [
     url: "#",
   },
 ];
+// homeSmile, file02, searchMd, plusSquare
