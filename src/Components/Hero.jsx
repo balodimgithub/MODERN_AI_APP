@@ -5,7 +5,9 @@ import Button from "./Button";
 import { curve, herobackground, robot } from "../assets/assets";
 import { ScrollParallax } from "react-just-parallax";
 import { heroIcons } from "../Constants";
-import { Gradient, BackgroundCircles } from "./design/Hero";
+import { Gradient, BackgroundCircles, BottomLine } from "./design/Hero";
+import { Generating } from "./Generating";
+import { Notification } from "./Notification";
 export const Hero = () => {
   const parallaxRef = useRef(null);
   return (
@@ -22,8 +24,8 @@ export const Hero = () => {
       text-center mb-[4rem] md:mb-20 lg:mb-[6rem]"
         >
           <div className="relative z-4 mb-6 md:mb-20 lg:mb-40">
-            <h1 className="h1  mb-6 ">
-              Explore the Possibilities of AI Chatting with {"  "}
+            <h1 className="h1 mb-6 ">
+              Explore the Possibilities of &nbsp;AI&nbsp;Chatting with {"  "}
               <span className="inline-block relative">
                 Brainwave
                 <img
@@ -61,6 +63,10 @@ lg:aspect-[1024/490]"
                     height={300}
                     alt="AI"
                   />
+                  <Generating
+                    className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8
+                  md:w-[31rem] md:-translate-x-1/2"
+                  />
                   <ScrollParallax isAbsolutelyPositioned>
                     <ul
                       className="hidden  absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1
@@ -72,6 +78,12 @@ lg:aspect-[1024/490]"
                         </li>
                       ))}
                     </ul>
+                  </ScrollParallax>
+                  <ScrollParallax isAbsolutelyPositioned>
+                    <Notification
+                      className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex"
+                      title="Code generation"
+                    />
                   </ScrollParallax>
                 </div>
               </div>
@@ -94,6 +106,7 @@ lg:aspect-[1024/490]"
           </div>
         </div>
       </div>
+      <BottomLine />
     </Section>
   );
 };
