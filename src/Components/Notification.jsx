@@ -1,5 +1,6 @@
 import React from "react";
 import { notificationImages } from "../Constants";
+import { notification1 } from "../assets/assets";
 
 export const Notification = ({ className, title }) => {
   return (
@@ -7,22 +8,30 @@ export const Notification = ({ className, title }) => {
       className={`${className || ""} flex items-center pr-6 p-4
    bg-n-9/40 backdrop-blur border-n-1/10 rounded-2xl gap-5`}
     >
+      {/* The Image on right */}
+      <img src={notification1} width={62} height={62} className="rounded-xl" />
+      {/* Mapped Image */}
       <div className="flex-1">
         <h6 className="mb-1 font-semibold justify-between">{title}</h6>
         <div className="flex items-center justify-between">
           <ul className="flex -m-0.5 ">
-            {notificationImages.map((item, index) => {
-              <li key={index}>
+            {notificationImages.map((item, index) => (
+              <li
+                className="flex w-6 h-6 border-2 border-n-12
+               rounded-full overflow-hidden"
+                key={index}
+              >
                 <img
                   src={item}
                   width={20}
                   height={20}
                   className="w-full"
-                  alt=""
+                  alt={item}
                 />
-              </li>;
-            })}
+              </li>
+            ))}
           </ul>
+          <div className="body-2 text-n-13">1m ago</div>
         </div>
       </div>
     </div>

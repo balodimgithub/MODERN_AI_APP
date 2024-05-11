@@ -8,6 +8,7 @@ import { heroIcons } from "../Constants";
 import { Gradient, BackgroundCircles, BottomLine } from "./design/Hero";
 import { Generating } from "./Generating";
 import { Notification } from "./Notification";
+import { CompanyLogos } from "./CompanyLogos";
 export const Hero = () => {
   const parallaxRef = useRef(null);
   return (
@@ -21,7 +22,7 @@ export const Hero = () => {
       <div className="container relative " ref={parallaxRef}>
         <div
           className="relative   max-w-[62rem] mx-auto
-      text-center mb-[4rem] md:mb-20 lg:mb-[6rem]"
+      text-center mb-[4rem] md:mb-20 lg:mb-[6rem] mt-[90px]"
         >
           <div className="relative z-4 mb-6 md:mb-20 lg:mb-40">
             <h1 className="h1 mb-6 ">
@@ -63,10 +64,12 @@ lg:aspect-[1024/490]"
                     height={300}
                     alt="AI"
                   />
+                  {/*AI IS GENERATING TEXT  */}
                   <Generating
-                    className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8
+                    className="absolute z-10 left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8
                   md:w-[31rem] md:-translate-x-1/2"
                   />
+                  {/* Home, search and other buttons component */}
                   <ScrollParallax isAbsolutelyPositioned>
                     <ul
                       className="hidden  absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1
@@ -79,6 +82,7 @@ lg:aspect-[1024/490]"
                       ))}
                     </ul>
                   </ScrollParallax>
+                  {/* CODE GENERATION */}
                   <ScrollParallax isAbsolutelyPositioned>
                     <Notification
                       className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex"
@@ -104,6 +108,7 @@ lg:aspect-[1024/490]"
             </div>
             <BackgroundCircles />
           </div>
+          <CompanyLogos className="hidden relative z-10 mt-20 lg:block" />
         </div>
       </div>
       <BottomLine />
