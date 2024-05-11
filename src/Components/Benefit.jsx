@@ -2,6 +2,7 @@ import React from "react";
 import { Section } from "./Section";
 import { Heading } from "./Heading";
 import { benefits } from "../Constants";
+import Arrow from "../assets/assets/svg/Arrow";
 export const Benefit = () => {
   return (
     <Section id="features">
@@ -26,6 +27,16 @@ export const Benefit = () => {
               >
                 <h5 className="h5 mb-5 ">{benefit.title}</h5>
                 <p className="body-2 mb-6 text-n-3">{benefit.text}</p>
+                <div className="flex items-center mt-auto">
+                  <img
+                    src={benefit.iconUrl}
+                    width={48}
+                    height={48}
+                    alt={benefit.title}
+                  />
+                  <p>Explore more</p>
+                  <Arrow />
+                </div>
               </div>
             </div>
           ))}
