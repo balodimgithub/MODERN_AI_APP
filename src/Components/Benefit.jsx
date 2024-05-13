@@ -3,6 +3,8 @@ import { Section } from "./Section";
 import { Heading } from "./Heading";
 import { benefits } from "../Constants";
 import Arrow from "../assets/assets/svg/Arrow";
+import { GradientLight } from "./design/Benefits";
+
 export const Benefit = () => {
   return (
     <Section id="features">
@@ -34,8 +36,33 @@ export const Benefit = () => {
                     height={48}
                     alt={benefit.title}
                   />
-                  <p>Explore more</p>
+                  <p
+                    className="ml-auto font-code text-xs 
+                   font-bold text-n-1 uppercase tracking-wider"
+                  >
+                    Explore more
+                  </p>
                   <Arrow />
+                </div>
+              </div>
+              <div>{benefit.light && <GradientLight />}</div>
+              <div
+                className="absolute inset-0.5 bg-n-8
+              "
+                style={{
+                  clipPath: "url(#benefits)",
+                }}
+              >
+                <div>
+                  {benefit.imageUrl && (
+                    <img
+                      width={380}
+                      height={362}
+                      src={benefit.imageUrl}
+                      className="w-full h-full object-cover"
+                      alt={benefit.title}
+                    />
+                  )}
                 </div>
               </div>
             </div>
