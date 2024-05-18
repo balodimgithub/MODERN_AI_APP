@@ -4,6 +4,7 @@ import { Heading } from "./Heading";
 import { benefits } from "../Constants";
 import Arrow from "../assets/assets/svg/Arrow";
 import { GradientLight } from "./design/Benefits";
+import ClipPath from "../assets/assets/svg/ClipPath";
 
 export const Benefit = () => {
   return (
@@ -53,7 +54,10 @@ export const Benefit = () => {
                   clipPath: "url(#benefits)",
                 }}
               >
-                <div>
+                <div
+                  className="absolute inset-0 opacity-0 transition-opacity
+                hover:opacity-10"
+                >
                   {benefit.imageUrl && (
                     <img
                       width={380}
@@ -65,6 +69,7 @@ export const Benefit = () => {
                   )}
                 </div>
               </div>
+              <ClipPath />
             </div>
           ))}
         </div>
