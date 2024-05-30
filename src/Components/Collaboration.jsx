@@ -1,9 +1,9 @@
 import React from "react";
 import { Section } from "./Section";
-import { collabContent } from "../Constants";
-import { check } from "../assets/assets";
+import { collabApps, collabContent } from "../Constants";
+import { brainwaveSymbol, check } from "../assets/assets";
 import Button from "./Button";
-
+import { collabText } from "../Constants";
 export const Collaboration = () => {
   return (
     <Section crosses>
@@ -18,14 +18,68 @@ export const Collaboration = () => {
                 <div className="flex items-center">
                   <img src={check} width={24} height={24} alt="" />
                   <h6 className="body-2 ml-5">{collab.title}</h6>
-                  {collab.text && (
-                    <p className="body-2 mt-3 text-n-4">{collab.text}</p>
-                  )}
                 </div>
+                {collab.text && (
+                  <p className="body-2 mt-3 text-n-4">{collab.text}</p>
+                )}
               </li>
             ))}
           </ul>
           <Button> Try it Now</Button>
+        </div>
+        <div className="lg:ml-auto xl:w-[38rem] mt-4">
+          <p
+            className="body-2 mb-4 text-n-4 md:mb-16 lg:mb-32
+       lg:w-[22rem] lg:mx-auto"
+          >
+            {collabText}
+          </p>
+          <div
+            className="relative left-1/2 flex w-[22rem] aspect-square border-n-6 border rounded-full
+          -translate-x-1/2 scale-75 md:scale-100"
+          >
+            <div
+              className="flex w-60 aspect-square rounded-full border-n-6  border
+            m-auto"
+            >
+              <div
+                className="w-[6rem] aspect-square p-[0.2rem] 
+              rounded-full m-auto bg-conic-gradient"
+              >
+                <div
+                  className="flex items-center justify-center w-full
+                h-full bg-n-8 rounded-full"
+                >
+                  <img
+                    width={48}
+                    height={48}
+                    className=""
+                    src={brainwaveSymbol}
+                    alt="brainWave"
+                  />
+                </div>
+              </div>
+            </div>
+            <ul className="bg-blue-300">
+              {collabApps.map((app, index) => (
+                <li
+                  key={app.id}
+                  className={`absolute top-0 left-1/2 h-1/2 -ml-[1.6rem]
+    origin-bottom  rotate-${index * 45}`}
+                >
+                  <div>
+                    <img
+                      className="m-auto"
+                      width={app.width}
+                      height={app.height}
+                      src={app.icon}
+                      alt={app.title}
+                    />
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </Section>
