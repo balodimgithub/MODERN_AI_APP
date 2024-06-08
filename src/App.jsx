@@ -4,6 +4,7 @@ import { Collaboration } from "./Components/Collaboration";
 // import Button from "./Components/Button";
 import Header from "./Components/Header";
 import { Hero } from "./Components/Hero";
+import { Services } from "./Components/Services";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Hero />
         <Benefit />
         <Collaboration />
+        <Services />
       </div>
     </>
   );
