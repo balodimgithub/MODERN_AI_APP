@@ -4,6 +4,7 @@ import { Collaboration } from "./Components/Collaboration";
 // import Button from "./Components/Button";
 import Header from "./Components/Header";
 import { Hero } from "./Components/Hero";
+import { Pricing } from "./Components/Pricing";
 import { Services } from "./Components/Services";
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
         <Benefit />
         <Collaboration />
         <Services />
+        <Pricing />
       </div>
     </>
   );

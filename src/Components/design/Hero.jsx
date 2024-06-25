@@ -19,7 +19,7 @@ export const BottomLine = () => {
 
       <PlusSvg className="hidden  absolute top-[54.9375rem] left-[2.1875rem] z-2 pointer-events-none xl:block" />
 
-      <PlusSvg className="hidden absolute top-[54.9375rem] right-[2.1875rem] z-2 pointer-events-none xl:block" />
+      <PlusSvg className="hidden absolute top-[54.9375rem] right-[2.1875rem]  z-2 pointer-events-none xl:block" />
     </>
   );
 };
