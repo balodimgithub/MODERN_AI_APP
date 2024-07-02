@@ -314,7 +314,7 @@ export const socials = [
     id: "1",
     title: "Twitter",
     iconUrl: twitter,
-    url: "#",
+    url: "https://x.com/balodim1?t=GntIr7TpcA5ZrIu-tKtH0Q&s=09",
   },
   {
     id: "2",

@@ -33,7 +33,7 @@ export const Section = ({
       {crosses && (
         <>
           <div
-            className={`hidden absolute  left-7.5 right-7.5 h-7.5 ${
+            className={`hidden absolute  left-7.5 right-7.5 h-7.5  ${
               crossesOffset && crossesOffset
             } 
    pointer-events-none lg:block left-10 right-10`}
