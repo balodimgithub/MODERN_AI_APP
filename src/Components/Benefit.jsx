@@ -18,12 +18,17 @@ export const Benefit = () => {
           {benefits.map((benefit) => (
             <div
               key={benefit.id}
-              className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%]
-            md:max-w-[24rem]"
+              className={`block bg-style  relative border-[2px] rounded-[30px] rounded-tr-[71px] p-0.5 bg-no-repeat bg-[length:100%_100%]
+            md:max-w-[24rem] ${
+              benefit.backgroundUrl
+                ? ""
+                : `border-color-1 first:border-[#89baf9]  last:border-color-3`
+            }`}
               style={{
                 backgroundImage: `url(${benefit.backgroundUrl})`,
               }}
             >
+              {/* Light purple #D87CEE, Light Green #89F9E8, biege #FACB7B,#9099FC Violet purple, #89baf9 blue */}
               <div
                 className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem]
               pointer-events-none"
