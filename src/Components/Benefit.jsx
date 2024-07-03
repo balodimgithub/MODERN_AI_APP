@@ -19,14 +19,7 @@ export const Benefit = () => {
             <div
               key={benefit.id}
               className={`block bg-style  relative border-[2px] rounded-[30px] rounded-tr-[71px] p-0.5 bg-no-repeat bg-[length:100%_100%]
-            md:max-w-[24rem] ${
-              benefit.backgroundUrl
-                ? ""
-                : `border-color-1 first:border-[#89baf9]  last:border-color-3`
-            }`}
-              style={{
-                backgroundImage: `url(${benefit.backgroundUrl})`,
-              }}
+            md:max-w-[24rem] border-color-1 first:border-[#89baf9]  last:border-color-3 odd:border-[#FACB7B]`}
             >
               {/* Light purple #D87CEE, Light Green #89F9E8, biege #FACB7B,#9099FC Violet purple, #89baf9 blue */}
               <div
